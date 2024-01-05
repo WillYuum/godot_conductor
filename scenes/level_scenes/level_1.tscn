@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://bedkn15a32i2f"]
+
+[ext_resource type="PackedScene" uid="uid://imhwi3a4eljv" path="res://prefabs/levels_assets/3x-tile.tscn" id="1_d121t"]
+[ext_resource type="PackedScene" uid="uid://6b7rxgskcjj4" path="res://prefabs/levels_assets/1x-tile.tscn" id="2_1oog4"]
+[ext_resource type="Texture2D" uid="uid://d4imky55cbtgo" path="res://textures/level_textures/tile_background_tree_large.png" id="3_e5wsc"]
+[ext_resource type="Texture2D" uid="uid://dlvb800mo7ubt" path="res://textures/level_textures/tile_background_tree_small.png" id="4_250h6"]
+[ext_resource type="Texture2D" uid="uid://b4d75o4eh1qhr" path="res://textures/level_textures/tile_cloud.png" id="5_ox4jp"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="3x-tile" parent="." instance=ExtResource("1_d121t")]
+position = Vector2(1, 85)
+
+[node name="1x-tile" parent="." instance=ExtResource("2_1oog4")]
+position = Vector2(411, 212)
+
+[node name="trees_node2D" type="Node2D" parent="."]
+z_index = -4
+position = Vector2(4, 3)
+
+[node name="TileBackgroundTreeLarge" type="Sprite2D" parent="trees_node2D"]
+position = Vector2(150, -102)
+texture = ExtResource("3_e5wsc")
+
+[node name="TileBackgroundTreeSmall" type="Sprite2D" parent="trees_node2D"]
+position = Vector2(-197, -66)
+texture = ExtResource("4_250h6")
+
+[node name="cloud_node2D" type="Node2D" parent="."]
+z_index = -5
+
+[node name="TileCloud" type="Sprite2D" parent="cloud_node2D"]
+position = Vector2(294, -145.963)
+scale = Vector2(0.925926, 0.925926)
+texture = ExtResource("5_ox4jp")
+
+[node name="TileCloud4" type="Sprite2D" parent="cloud_node2D"]
+position = Vector2(149, -295.963)
+scale = Vector2(0.925926, 0.925926)
+texture = ExtResource("5_ox4jp")
+
+[node name="TileCloud2" type="Sprite2D" parent="cloud_node2D"]
+position = Vector2(-331, -225.963)
+texture = ExtResource("5_ox4jp")
+
+[node name="TileCloud3" type="Sprite2D" parent="cloud_node2D"]
+position = Vector2(-99, -218.963)
+scale = Vector2(1.31363, 1.31363)
+texture = ExtResource("5_ox4jp")

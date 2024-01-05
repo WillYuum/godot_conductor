@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://6b7rxgskcjj4"]
+
+[ext_resource type="Texture2D" uid="uid://b0nymg6rlhx5b" path="res://textures/level_textures/tile.png" id="1_mmd3l"]
+
+[node name="1x-tile" type="Node2D"]
+
+[node name="Tile" type="Sprite2D" parent="."]
+texture = ExtResource("1_mmd3l")

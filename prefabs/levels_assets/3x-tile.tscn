@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://imhwi3a4eljv"]
+
+[ext_resource type="Texture2D" uid="uid://wvx8g8dowpm4" path="res://textures/level_textures/tile_half_left.png" id="1_l80qx"]
+[ext_resource type="Texture2D" uid="uid://311refjhh3g" path="res://textures/level_textures/tile_half_center.png" id="2_jonym"]
+[ext_resource type="Texture2D" uid="uid://bu0txcjbfmcqh" path="res://textures/level_textures/tile_half_right.png" id="3_ywdk2"]
+
+[node name="3x-tile" type="Node2D"]
+
+[node name="TileHalfLeft" type="Sprite2D" parent="."]
+position = Vector2(-160, 0)
+texture = ExtResource("1_l80qx")
+
+[node name="TileHalfCenter" type="Sprite2D" parent="."]
+texture = ExtResource("2_jonym")
+
+[node name="TileHalfRight" type="Sprite2D" parent="."]
+position = Vector2(160, 0)
+texture = ExtResource("3_ywdk2")
