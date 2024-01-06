@@ -4,6 +4,11 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	enable_movement_on_character();
+
+	delay_callback(1.0, func():
+		conductor_plays();
+		pass;
+	);
 	pass;
 
 
@@ -39,3 +44,16 @@ func enable_movement_on_character():
 func delay_callback(delayInSeconds, callback: Callable):
 	await get_tree().create_timer(delayInSeconds).timeout;
 	callback.call();
+
+
+
+func conductor_plays():
+	print_debug("Conductor plays");
+	var conductor = get_node("Conductor") as Conductor;
+	conductor.toggle_music();
+
+
+	var level_one_controller = get_node("Level1") as Level_one_controller;
+	level_one_controller.setup_level(conductor);
+
+	pass;

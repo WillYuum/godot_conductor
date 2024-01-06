@@ -18,5 +18,4 @@ position = Vector2(-6, -16)
 
 [node name="Conductor" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ry8jt")
-autoplay = true
 script = ExtResource("4_fmyg6")
